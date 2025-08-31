@@ -53,7 +53,7 @@ document.getElementById('edad').addEventListener('mouseover', function() {
         if (currentAge > 0) {
             edadElement.innerText = currentAge.toString(); // Convertir a string
             currentAge--;
-            speed = Math.max(10, speed - 2); // Acelera la reducción
+            speed = Math.max(10, speed - 4); // Acelera la reducción
             interval = setTimeout(decreaseAge, speed);
         } else {
             edadElement.innerText = "0"; // Convertir a string
