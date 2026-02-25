@@ -1,32 +1,108 @@
-/* Estilos generales */
-.like-container {
-    position: relative;
-    overflow: hidden;
+/* ═══════════════════════════════════════════════════════════
+   styles.css — Portafolio Iván Negrete (Versión actualizada)
+   ═══════════════════════════════════════════════════════════ */
+
+
+/* ─────────────────────────────────────────────────────────── */
+/* WIGGLE (Trinity Pool)                                       */
+/* ─────────────────────────────────────────────────────────── */
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-5deg); }
+  50%       { transform: rotate(5deg); }
 }
 
-#overlay-like-image {
-    opacity: 0; /* Inicialmente oculta */
-    transition: opacity 0.3s ease;
+.wiggle-anim {
+  animation: wiggle 2s ease-in-out infinite;
 }
 
-/* Clase para la animación */
+/* ─────────────────────────────────────────────────────────── */
+/* LIKE ANIMATION (LinkedIn y Twitter)                         */
+/* ─────────────────────────────────────────────────────────── */
+#overlay-like-image,
+#overlay-love-image {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
 .like-animation {
-    animation: like-spin-up 0.7s ease-out forwards; /* Animación de giro hacia arriba */
+  animation: like-spin-up 0.7s ease-out forwards;
 }
 
-/* Keyframes de la animación */
 @keyframes like-spin-up {
-    0% {
-        opacity: 0.8;
-        transform: translate(-50%, 100%) rotate(0deg) scale(0.7); /* Comienza abajo */
-    }
-        75% {
-        opacity: 0.9;
-        transform: translate(-50%, -50%) rotate(720deg) scale(1); /* Gira al subir y se mantiene visible en el centro */
-    }
+  0% {
+    opacity: 0.8;
+    transform: translate(-50%, 100%) rotate(0deg) scale(0.7);
+  }
+  75% {
+    opacity: 0.9;
+    transform: translate(-50%, -50%) rotate(720deg) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(720deg) scale(1);
+  }
+}
 
-    100% {
-        opacity: 0;
-        transform: translate(-50%, -50%) rotate(720deg) scale(1); /* Gira y se desvanece en el centro */
-    }
+/* ─────────────────────────────────────────────────────────── */
+/* SWIPER (Modal de Skills)                                    */
+/* ─────────────────────────────────────────────────────────── */
+.swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: 0 auto;
+}
+
+/* CRÍTICO para coverflow: width fijo en cada slide */
+.swiper-slide {
+  width: 180px !important;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 16px;
+  object-fit: contain;
+}
+
+/* ─────────────────────────────────────────────────────────── */
+/* SCROLLBAR OCULTA                                            */
+/* ─────────────────────────────────────────────────────────── */
+body::-webkit-scrollbar { display: none; }
+body { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* ─────────────────────────────────────────────────────────── */
+/* MODAL SKILLS                                                */
+/* ─────────────────────────────────────────────────────────── */
+#skillsModal {
+  backdrop-filter: blur(4px);
+}
+
+/* ─────────────────────────────────────────────────────────── */
+/* SPOTIFY: transiciones suaves                                */
+/* ─────────────────────────────────────────────────────────── */
+#spotify-container {
+  transition: background-color 0.7s ease, box-shadow 0.7s ease;
+}
+
+#lyricsPanel {
+  transition: transform 0.7s ease-out;
+}
+
+#albumWrap {
+  transition: transform 0.7s ease-out, opacity 0.7s ease-out;
+}
+
+#albumText {
+  transition: opacity 0.7s ease-out;
+}
+
+html {
+  scroll-behavior: smooth;
 }

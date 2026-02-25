@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -6,372 +7,376 @@
     <title>Mi portafolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="icon" type="image/png" href="img/NS.png">
+    <link rel="icon" type="image/png" href="/img/NS.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Handjet:wght@600;700;800&family=Ubuntu:ital,wght@0,300;0,500;0,700;1,400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <link rel="stylesheet" href="styles.css">
-
-    <style>
-      body::-webkit-scrollbar {
-        display: none; /* Ocultar la barra de scroll */
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              Ubuntu: ['Ubuntu', 'sans-serif'],
+              Handjet: ['Handjet', 'cursive'],
+            },
+          },
+        },
       }
+    </script>
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      body::-webkit-scrollbar { display: none; }
     </style>
-
   </head>
 
-  <body
-    class="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-700 via- to-black overflow-auto"
-  >
-    <div class="flex flex-col m-5">
-      <div
-        class="grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-4 my-5 container mx-auto xl:px-20"
-      >
-        <!-- Sección Principal (Info Personal) -->
+  <body class="bg-black overflow-auto" style="background: radial-gradient(ellipse at center, #374151 0%, #000000 100%);">
+    <div class="flex flex-col m-0">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-4 my-5 container mx-auto xl:px-20 p-3">
+
+        <!-- PRINCIPAL 1 -->
         <div
-          class="relative md:col-span-3 aspect-square md:aspect-auto md:row-span-2  bg-gradient-to-r from-[#00C2D1] via-blue-500 to-purple-600 rounded-3xl overflow-hidden animate-fade-right animate-duration-[2000ms]"
+          class="relative md:col-span-3 md:row-span-2 aspect-square md:aspect-auto
+                rounded-3xl overflow-hidden
+                bg-gradient-to-br from-slate-950 via-violet-950 to-slate-900
+          animate-fade-right animate-duration-[2000ms]"
         >
+          <div class="absolute -top-32 -left-32 w-96 h-96 bg-violet-600/30 rounded-full blur-3xl pointer-events-none"></div>
+
           <section
-            class="absolute left-0  md:w-1/2 my-10 md:my-40 mx-5 md:mx-10 font-sans text-fuchsia-50 text-xl md:text-3xl font-Ubuntu"
+            class="relative z-10 md:w-1/2 my-10 md:my-32 mx-5 md:mx-10
+                  backdrop-blur-xl bg-white/10 border border-white/15
+                  rounded-3xl p-6 md:p-8 text-slate-200 font-Ubuntu"
           >
-            <h1 class="text-3xl md:text-4xl pb-2 md:pb-5 font-Ubuntu font-bold animate-fade-down animate-ease-in-out animate-delay-1000">
+            <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-white animate-fade-down animate-delay-1000">
               Iván Daniel Negrete Sudy
             </h1>
-            <span class="font-Ubuntu text-lg md:text-2xl animate-fade-right animate-duration-[2000ms]"
-              >¡Hola! 😀 Bienvenido a mi página. 
-              Aquí encontrarás un breve resumen sobre mí, 
-              donde intento innovar y destacar con un enfoque 
-              distinto. Soy un desarrollador titulado en Ingeniería 
-              en Informática y te invito a echar un vistazo.
-            </span>
+            <p class="mt-2 text-lg md:text-2xl text-violet-300 font-medium">
+              Desarrollador de Software · Ingeniería Informática
+            </p>
+            <p class="mt-6 text-base md:text-xl leading-relaxed">
+              Diseño y desarrollo <span class="text-white font-semibold">sistemas reales</span>
+              que gestionan procesos críticos y son utilizados diariamente por
+              <span class="text-white font-semibold">empresas e instituciones</span>.
+            </p>
+            <a
+              href="#spotify-container"
+              class="inline-flex items-center gap-2 mt-8 text-violet-300 hover:text-white transition group"
+            >
+              Echa un vistazo
+              <span class="group-hover:translate-x-1 transition-transform">→</span>
+            </a>
           </section>
+
           <img
             id="rotatingImage"
-            src="img/tres.png"
+            src="/img/tres.png"
             height="512"
             width="512"
-            class="absolute bottom-0 -right-24 w-8/12 md:h-full md:auto object-cover -z-0 hidden md:flex animate-duration-[4000ms]"
+            class="absolute bottom-0 -right-24 w-8/12 md:h-full object-cover hidden md:flex drop-shadow-[0_0_40px_rgba(167,139,250,0.35)]"
             alt="Imagen Personal"
           />
         </div>
 
-        <!-- Sección de Perfil (Lateral) -->
+        <!-- DISCORD -->
         <div
           class="flex flex-col bg-zinc-900 rounded-3xl relative overflow-hidden md:col-span-1 md:row-span-2 animate-fade-left animate-delay-[400ms] animate-duration-[2000ms]"
         >
           <div class="w-full bg-white h-[125px] mt-0 overflow-hidden">
-            <img
-              src="img/banner.gif"
-              class="object-cover h-full w-full"
-              alt="Banner"
-            />
+            <img src="/img/banner.gif" class="object-cover h-full w-full" alt="Banner" />
           </div>
-          <div
-            class="bg-green-400 w-6 h-6 rounded-full absolute mt-[137px] ml-[65px] border-4 border-zinc-900 z-50"
-          ></div>
-          <div
-            class="bg-white w-20 h-20 rounded-full absolute mt-[82px] ml-3 border-4 border-zinc-900 overflow-hidden"
-          >
-            <img src="img/cat.jpg" class="h-full" alt="Foto de Perfil" />
+          <div class="bg-green-400 w-6 h-6 rounded-full absolute mt-[137px] ml-[65px] border-4 border-zinc-900 z-50"></div>
+          <div class="bg-white w-20 h-20 rounded-full absolute mt-[82px] ml-3 border-4 border-zinc-900 overflow-hidden">
+            <img src="/img/cat.jpg" class="h-full" alt="Foto de Perfil" />
           </div>
-          <div
-            class="absolute right-8 top-[135px] h-8 w-[123px] rounded-lg bg-zinc-800"
-          >
-            <img
-              src="https://cdn.discordapp.com/emojis/1118229890756526170.webp?size=44&quality=lossless"
-              class="absolute top-1 left-1 z-10 h-6"
-              alt=""
-            />
-            <img
-              src="https://cdn.discordapp.com/emojis/1112318025182498876.webp?size=44&quality=lossless"
-              class="absolute top-1 left-7 z-10 h-6"
-              alt=""
-            />
-            <img
-              src="https://cdn.discordapp.com/emojis/1097524725464432750.webp?size=44&quality=lossless"
-              class="absolute top-1 left-[50px] z-10 h-6"
-              alt=""
-            />
+          <div class="absolute right-8 top-[135px] h-8 w-[123px] rounded-lg bg-zinc-800">
+            <img src="https://cdn.discordapp.com/emojis/1118229890756526170.webp?size=44&quality=lossless" class="absolute top-1 left-1 z-10 h-6" alt="" />
+            <img src="https://cdn.discordapp.com/emojis/1112318025182498876.webp?size=44&quality=lossless" class="absolute top-1 left-7 z-10 h-6" alt="" />
+            <img src="https://cdn.discordapp.com/emojis/1097524725464432750.webp?size=44&quality=lossless" class="absolute top-1 left-[50px] z-10 h-6" alt="" />
             <span class="absolute top-1 left-[75px]">🎹</span>
             <span class="absolute top-1 left-24">😎</span>
           </div>
           <div class="px-8 pb-3 pt-14 text-slate-50">
-            <div class="text-xl font-bold leading-7">
-              <span>Iván ☕</span>
-            </div>
-            <div class="font-semibold leading-6">
-              <span> @Ivánchiz</span>
-            </div>
+            <div class="text-xl font-bold leading-7"><span>Iván ☕</span></div>
+            <div class="font-semibold leading-6"><span>@Ivánchiz</span></div>
             <div class="text-xs leading-10">
-              <span>🖥 Playing</span>
-              <strong>Visual Studio Code</strong>
+              <span>🖥 Playing</span> <strong>Visual Studio Code</strong>
             </div>
             <div class="mb-1 h-[1px] w-full bg-zinc-800"></div>
           </div>
           <div class="h-72 px-8">
-            <p
-              class="mb-1 text-xs font-bold uppercase leading-4 text-slate-300"
-            >
-              About me
-            </p>
-            <p class="text-slate-50 text-[13px]">
-              ⚡ Toco piano ⚡ Fanatico del Tenis
-            </p>
-            <p class="text-slate-50 text-[13px]">
-              ⚡ Videojuegos ⚡ Me encanta programar
-            </p>
-            <p
-              class="mb-1 text-xs font-bold uppercase leading-4 text-slate-300 mt-3"
-            >
-              Member since
-            </p>
+            <p class="mb-1 text-xs font-bold uppercase leading-4 text-slate-300">About me</p>
+            <p class="text-slate-50 text-[13px]">⚡ Toco piano ⚡ Fanatico del Tenis</p>
+            <p class="text-slate-50 text-[13px]">⚡ Videojuegos ⚡ Me encanta programar</p>
+            <p class="mb-1 text-xs font-bold uppercase leading-4 text-slate-300 mt-3">Member since</p>
             <div class="flex items-center gap-x-2 text-slate-50 text-xs">
               <span class="inline-block">
-                <img
-                  class="h-8"
-                  src="https://static.vecteezy.com/system/resources/previews/018/930/718/original/discord-logo-discord-icon-transparent-free-png.png"
-                  alt="Discord"
-                />
+                <img class="h-8" src="https://static.vecteezy.com/system/resources/previews/018/930/718/original/discord-logo-discord-icon-transparent-free-png.png" alt="Discord" />
               </span>
               6 oct, 2016
             </div>
-            <p
-              class="mb-2 text-xs font-bold uppercase leading-4 text-slate-300 mt-3"
-            >
-              Roles
-            </p>
+            <p class="mb-2 text-xs font-bold uppercase leading-4 text-slate-300 mt-3">Roles</p>
             <div class="mb-3 mt-0.5 flex flex-wrap text-slate-50">
-              <div
-                class="mb-1 mr-1 flex items-center rounded p-1 text-xs font-medium bg-zinc-800"
-              >
-                <span class="mr-1 max-w-[200px] text-ellipsis whitespace-nowrap"
-                  >🔷 Responsable</span
-                >
+              <div class="mb-1 mr-1 flex items-center rounded p-1 text-xs font-medium bg-zinc-800">
+                <span class="mr-1 max-w-[200px] text-ellipsis whitespace-nowrap">🔷 Responsable</span>
               </div>
-              <div
-                class="mb-1 mr-1 flex items-center rounded p-1 text-xs font-medium bg-zinc-800"
-              >
-                <span class="mr-1 max-w-[200px] text-ellipsis whitespace-nowrap"
-                  >🔴 Autodidacta</span
-                >
+              <div class="mb-1 mr-1 flex items-center rounded p-1 text-xs font-medium bg-zinc-800">
+                <span class="mr-1 max-w-[200px] text-ellipsis whitespace-nowrap">🔴 Autodidacta</span>
               </div>
-              <div
-                class="mb-1 mr-1 flex items-center rounded p-1 text-xs font-medium bg-zinc-800"
-              >
-                <span class="mr-1 max-w-[200px] text-ellipsis whitespace-nowrap"
-                  >🔶 Trabajo en equipo</span
-                >
+              <div class="mb-1 mr-1 flex items-center rounded p-1 text-xs font-medium bg-zinc-800">
+                <span class="mr-1 max-w-[200px] text-ellipsis whitespace-nowrap">🔶 Trabajo en equipo</span>
               </div>
-              <div
-                class="mb-1 mr-1 flex items-center rounded p-1 text-xs font-medium bg-zinc-800"
-              >
-                <span class="mr-1 max-w-[200px] text-ellipsis whitespace-nowrap"
-                  >🟩 Comprometido</span
-                >
+              <div class="mb-1 mr-1 flex items-center rounded p-1 text-xs font-medium bg-zinc-800">
+                <span class="mr-1 max-w-[200px] text-ellipsis whitespace-nowrap">🟩 Comprometido</span>
               </div>
             </div>
-            <p
-              class="mb-1 text-xs font-bold uppercase leading-4 text-slate-300 mt-3"
-            >
-              Note
-            </p>
-            <p class="text-slate-300 text-xs">
-              Website made with Html/TailwindCSS
-            </p>
+            <p class="mb-1 text-xs font-bold uppercase leading-4 text-slate-300 mt-3">Note</p>
+            <p class="text-slate-300 text-xs">Website made with Astro/TailwindCSS</p>
           </div>
         </div>
 
-        <!-- Sección de Skills -->
+        <!-- SKILLS -->
         <div
-          class="text-white rounded-3xl flex overflow-hidden aspect-square shadow-sm bg-[#7A74C7] justify-center items-center animate-flip-down animate-delay-[900ms]"
+          class="col-span-2 text-white rounded-3xl flex overflow-hidden shadow-sm bg-slate-300 relative cursor-pointer group animate-flip-down animate-delay-[900ms]"
+          onclick="openSkillsModal()"
         >
-        <div class="grid grid-cols-3 gap-6 astro-J7PV25F6">
-          <article class="relative group">
-            <img alt="HTML5 logo" class="w-12 h-12 transition hover:scale-125 hover:-rotate-3" src="img/html.png">
-            <span class="absolute -top-10 left-1/2 -translate-x-1/2 font-Ubuntu bg-black text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity">
-              HTML
-            </span>
-          </article>
-          
-          <article class="relative group">
-            <img alt="CSS3 logo" class="w-12 h-12 transition hover:scale-125 hover:-rotate-3" src="img/css.png">
-            <span class="absolute -top-10 left-1/2 -translate-x-1/2 font-Ubuntu bg-black text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity">
-              CSS
-            </span>
-          </article>
-          
-          <article class="relative group">
-            <img alt="Tailwind CSS logo" class="w-12 mt-2 transition hover:scale-125 hover:-rotate-3" src="img/tailwind.webp">
-            <span class="absolute -top-10 left-1/2 -translate-x-1/2 font-Ubuntu bg-black text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity">
-              Tailwind
-            </span>
-          </article>
-          
-          <article class="relative group">
-            <img alt="Java logo" class="w-12 h-12 transition hover:scale-125 hover:-rotate-3" src="img/java.png">
-            <span class="absolute -top-10 left-1/2 -translate-x-1/2 font-Ubuntu bg-black text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity">
-              Java
-            </span>
-          </article>
-          
-          <article class="relative group">
-            <img alt="JavaScript logo" class="w-12 h-12 transition hover:scale-125 hover:-rotate-3" src="img/js.png">
-            <span class="absolute -top-10 left-1/2 -translate-x-1/2 font-Ubuntu bg-black text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity">
-              JavaScript
-            </span>
-          </article>
-          
-          <article class="relative group">
-            <img alt="Node.js logo" class="w-12 h-12 transition hover:scale-125 hover:-rotate-3" src="img/node.png">
-            <span class="absolute -top-10 left-1/2 -translate-x-1/2 font-Ubuntu bg-black text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity">
-              Node.js
-            </span>
-          </article>
-          
-          <article class="relative group">
-            <img alt="PHP logo" class="w-12 h-8 mt-1 transition hover:scale-125 hover:-rotate-3" src="img/php.png">
-            <span class="absolute -top-10 left-1/2 -translate-x-1/2 font-Ubuntu bg-black text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity">
-              PHP
-            </span>
-          </article>
-          
-          <article class="relative group">
-            <img alt="MySQL logo" class="w-12 h-12 transition hover:scale-125 hover:-rotate-3" src="img/mysql.png">
-            <span class="absolute -top-10 left-1/2 -translate-x-1/2 font-Ubuntu bg-black text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity">
-              MySQL
-            </span>
-          </article>
-          
-          <article class="relative group">
-            <img alt="Laravel logo" class="w-12 h-12 transition hover:scale-125 hover:-rotate-3" src="img/laravel.png">
-            <span class="absolute -top-10 left-1/2 -translate-x-1/2 font-Ubuntu bg-black text-white text-xs rounded px-2 py-1 opacity-0 group-hover:opacity-100 transition-opacity">
-              Laravel
-            </span>
-          </article>
-          
+          <!-- Lado izquierdo -->
+          <div class="w-1/2 flex flex-col justify-end pb-12 px-14">
+            <div class="flex gap-3 mb-4">
+              <div class="w-11 h-11 bg-white text-slate-800 rounded-xl flex items-center justify-center shadow-sm hover:scale-110 transition">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <div class="w-11 h-11 bg-white text-slate-800 rounded-xl flex items-center justify-center shadow-sm hover:scale-110 transition">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+              </div>
+            </div>
+            <h2 class="text-gray-800 text-4xl font-bold">Mis Skills</h2>
+          </div>
+
+          <!-- Lado derecho con mockup celular -->
+          <div class="w-2/3 relative group-hover:-translate-x-14 transition-transform duration-300">
+            <div class="absolute top-9 right-52 transform rotate-[-25deg] skew-y-[10deg] text-slate-200 font-bold text-xl z-10" id="reloj">
+              00:00
+            </div>
+            <div class="absolute top-24 right-[-25px] transform rotate-[-15deg] skew-x-[15deg] skew-y-[-2deg] z-10 flex gap-6">
+              <img src="/img/html.webp" alt="HTML" class="w-16 h-16 rounded-xl" />
+              <img src="/img/css.webp" alt="CSS" class="w-16 h-16 rounded-xl" />
+              <img src="/img/javascript.webp" alt="JavaScript" class="w-16 h-16 rounded-xl" />
+            </div>
+            <div class="absolute top-48 right-[-75px] transform rotate-[-15deg] skew-x-[15deg] skew-y-[-2deg] z-10 flex gap-6">
+              <img src="/img/php.webp" alt="PHP" class="w-16 h-16 rounded-xl" />
+              <img src="/img/laravel.webp" alt="Laravel" class="w-16 h-16 rounded-xl" />
+              <img src="/img/mysql.webp" alt="MySQL" class="w-16 h-16 rounded-xl" />
+            </div>
+            <div class="absolute -right-44 -top-14 scale-105 bottom-0 w-[130%] rounded-3xl transform rotate-[-2deg]">
+              <img src="/img/cel2.webp" alt="iPhone mockup" class="absolute right-0 top-1/2 -translate-y-1/2 h-[120%] object-contain" />
+            </div>
+          </div>
         </div>
+        <div id="skillsModal" class="hidden fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4" onclick="closeSkillsModal()">
+          <div class="bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-8 max-w-4xl w-full relative border border-slate-700/50 overflow-hidden" onclick="event.stopPropagation()">
+            <button
+              onclick="closeSkillsModal()"
+              class="absolute top-6 right-6 text-slate-400 hover:text-white text-xl w-8 h-8 rounded-full border border-slate-600 hover:border-slate-400 transition-all hover:rotate-90 z-10"
+            >×</button>
+            <h3 class="text-white text-2xl font-bold mb-6 font-Ubuntu">Stack Tecnológico (Proximamente, en beta 🤣)</h3>
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="/img/html.webp" alt="HTML" /></div>
+                <div class="swiper-slide"><img src="/img/css.webp" alt="CSS" /></div>
+                <div class="swiper-slide"><img src="/img/javascript.webp" alt="JavaScript" /></div>
+                <div class="swiper-slide"><img src="/img/php.webp" alt="PHP" /></div>
+                <div class="swiper-slide"><img src="/img/laravel.webp" alt="Laravel" /></div>
+                <div class="swiper-slide"><img src="/img/mysql.webp" alt="MySQL" /></div>
+                <div class="swiper-slide"><img src="/img/node.webp" alt="Node.js" /></div>
+                <div class="swiper-slide"><img src="/img/java.webp" alt="Java" /></div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <!-- Sección de Edad -->
+        <!-- SPOTIFY ALBA AMBIENTE -->
         <div
-          class="text-white rounded-3xl flex relative overflow-hidden aspect-square shadow-sm bg-[#9E509D] p-4 justify-center items-center animate-flip-down animate-delay-[1000ms]"
+          id="spotify-container"
+          class="relative md:col-span-2 min-h-80 rounded-3xl bg-zinc-900 p-0 shadow-lg flex flex-col justify-between text-white overflow-hidden animate-flip-down animate-delay-[1100ms]"
         >
+          <div class="absolute top-4 right-4 text-green-500 text-xl hover:scale-110 hover:drop-shadow-[0_0_8px_#1DB954] transition z-20">
+            <i class="fab fa-spotify text-2xl"></i>
+          </div>
+
+          <div class="text-center flex-1 flex flex-col items-center justify-center p-3 relative z-10">
+            <div id="albumWrap" class="transition-all duration-700 ease-out" style="will-change: transform, opacity;">
+              <img
+                src="/img/alba.png"
+                alt="Album Cover"
+                class="w-44 rounded-xl shadow-lg object-cover hover:drop-shadow-[0_0_15px_#1DB954] transition"
+              />
+            </div>
+            <span id="albumText" class="text-sm text-zinc-400 mt-3 -mb-1 transition-opacity duration-700">
+              Alba ambiente S.A - Desarrollador de software
+            </span>
+          </div>
+
+          <!-- Audio -->
+          <audio id="player" preload="metadata">
+            <source src="/audio/1.mp3" type="audio/mpeg" />
+          </audio>
+
+          <!-- Panel letras -->
           <div
-            class="flex justify-center items-center flex-col font-Handjet opacity-80"
+            id="lyricsPanel"
+            class="absolute left-0 right-0 -bottom-3 translate-y-full transition-transform duration-700 ease-out backdrop-blur p-3 pt- rounded-b-3xl z-0"
+            style="will-change: transform;"
           >
-            <span
-              id="edad"
-              class="select-none text-gray-800 text-9xl md:text-6xl lg:text-9xl font-Ubuntu font-bold hover:scale-[110%] transition duration-300 ease-in-out"
-              >26</span
-            >
-            <p
-              class="select-none text-gray-800 text-xs md:text-lg uppercase text-center mt-0 font-bold "
-            >
-              Años
-            </p>
+            <div class="relative min-h-[200px] flex items-center justify-center text-center leading-tight">
+              <p id="lyric1" class="absolute inset-0 flex items-center justify-center px-6 text-4xl text-slate-700 font-bold opacity-0 transition-opacity duration-700 hidden">
+                Diseño y mantengo sistemas críticos que gestionan asistencia y procesos operativos usados diariamente por empresas.
+              </p>
+              <p id="lyric2" class="absolute inset-0 flex items-center justify-center px-6 text-4xl text-slate-700 font-bold opacity-0 transition-opacity duration-700 hidden">
+                Desarrollo con PHP y Laravel, gestionando datos críticos en SQL Server y PostgreSQL, integradas a infraestructura en la nube.
+              </p>
+              <p id="lyric3" class="absolute inset-0 flex items-center justify-center px-6 text-4xl text-slate-700 font-bold opacity-0 transition-opacity duration-700 hidden">
+                Desarrollo reportes complejos para hospitales y sistemas completos de casino, integrados a asistencia, turnos y marcaciones.
+              </p>
+            </div>
+          </div>
+
+          <!-- Controles  -->
+          <div class="bg-black rounded-b-3xl p-3 pb-4 relative z-20">
+            <div class="flex items-center justify-between">
+              <span class="text-xs text-gray-400">Ag 2025</span>
+              <div class="flex-1 mx-4 bg-gray-700 h-1 mb-2 rounded-full overflow-hidden">
+                <div class="bg-white h-full w-0"></div>
+              </div>
+            <div class="relative">
+                <span class="text-xs text-gray-400">Today</span>
+                <p id="meses-empresa" class="text-xs text-gray-500 absolute -left-3 top-5 whitespace-nowrap"></p>
+              </div>
+            </div>
+            <div class="flex items-center justify-center gap-6">
+              <div class="text-gray-400"><i class="fas fa-random text-sm"></i></div>
+              <button onclick="prevLyric()" class="text-gray-400 hover:text-white transition">
+                <i class="fas fa-step-backward"></i>
+              </button>
+              <button
+                onclick="togglePlay()"
+                class="bg-white text-black rounded-full w-8 h-8 flex items-center justify-center hover:scale-110 transition"
+              >
+                <i id="playIcon" class="fas fa-play text-sm"></i>
+              </button>
+              <button onclick="nextLyric()" class="text-gray-400 hover:text-white transition">
+                <i class="fas fa-step-forward"></i>
+              </button>
+              <div class="text-gray-400"><i class="fas fa-redo text-sm"></i></div>
+            </div>
           </div>
         </div>
 
-        <!-- Sección de Experiencia HN Seguros -->
+        <!-- LINKEDIN -->
+        <a
+          href="https://www.linkedin.com/in/ivannegretes/"
+          target="_blank"
+          class="flex flex-col justify-center items-center bg-gradient-to-bl from-violet-900 via-violet-600 to-violet-300 rounded-3xl relative overflow-hidden col-span-1 aspect-square shadow-sm cursor-pointer animate-flip-down animate-delay-[1200ms]"
+        >
+          <img
+            class="h-[50%] hover:scale-[120%] transition duration-300 ease-in-out opacity-80"
+            src="/img/linkedin.webp"
+            alt="LinkedIn"
+          />
+        </a>
+
+        <!-- CV -->
+        <a
+          href="/pdf/IvánNegreteSudyCV.pdf"
+          target="_blank"
+          class="flex flex-col justify-center items-center bg-gradient-to-br from-slate-900 via-violet-950 to-slate-800 rounded-3xl relative overflow-hidden col-span-1 aspect-square shadow-sm cursor-pointer animate-flip-down animate-delay-[1300ms]"
+        >
+          <span class="text-white/80 text-9xl font-Ubuntu font-bold hover:scale-[110%] transition duration-300 ease-in-out">CV</span>
+        </a>
+
+        <!-- FACEBOOK HNSEGUROS -->
         <div
-          class="overflow-hidden relative md:col-span-2 row-span-1 p-5 md:p-10 justify-center items-center rounded-3xl shadow-sm bg-white animate-flip-down animate-delay-[1100ms] opacity-90"
+          class="md:col-span-2 rounded-3xl bg-white p-6 shadow-sm flex flex-col justify-between overflow-hidden relative animate-flip-down animate-delay-[1100ms]"
         >
           <div class="flex items-start">
             <img
               class="w-10 h-10 md:w-12 md:h-12 rounded-full mr-3"
-              height="40"
               src="https://i.ibb.co/xnDpxyF/Untitled-design-4.png"
-              width="40"
               alt="Logo HN Seguros"
             />
             <div class="flex-1">
               <div class="flex justify-between items-center">
                 <div>
-                  <a
-                    class="font-bold"
-                    href="https://www.linkedin.com/company/hnseguros/?viewAsMember=true"
-                    target="_blank"
-                    >HN Seguros</a
-                  >
-                  <p class="text-sm text-gray-500">
-                    Mar. 2023 · En. 2025
-                    <i class="fas fa-globe-americas"></i>
-                  </p>
+                  <a class="font-bold" href="https://www.linkedin.com/company/hnseguros/?viewAsMember=true" target="_blank">HN Seguros</a>
+                  <p class="text-sm text-gray-500">Mar. 2023 · En. 2025 <i class="fas fa-globe-americas"></i></p>
                 </div>
-                <div>
-                  <i class="fab fa-facebook text-blue-600 text-3xl"></i>
+                <div class="hover:scale-110 transition">
+                  <i class="fab fa-facebook text-blue-600 text-3xl hover:drop-shadow-[0_0_8px_#1877F2] transition"></i>
                 </div>
               </div>
-              <p class="mt-2 text-base md:text-lg line-clamp-5 text-ellipsis">
-                👨‍💼 En HN Seguros ha sido un desafio para mejorar la eficiencia
-                de la empresa! Diseñé una página web en WordPress para
-                fortalecer la presencia digital 💻 e implementé una campaña de
-                marketing que aumentó notablemente la producción. 📈📈📈
+              <p class="mt-2 text-base md:text-lg line-clamp-5">
+                👨‍💼 En HN Seguros ha sido un desafio para mejorar la eficiencia de la empresa! Diseñé una página web en WordPress para
+                fortalecer la presencia digital 💻 e implementé una campaña de marketing que aumentó notablemente la producción. 📈📈📈
               </p>
               <div class="flex items-center">
                 <div class="flex items-center mr-4">
-                  <i id="like" class="fas fa-thumbs-up text-blue-600"></i>
+                  <i class="fas fa-thumbs-up text-blue-600"></i>
                   <span id="like-count" class="ml-1 text-gray-600">594</span>
                 </div>
                 <div class="flex-1 text-right text-gray-600">
-                  <span> 546 comentarios</span>
+                  <span>546 comentarios</span>
                 </div>
               </div>
             </div>
           </div>
-          <div class="border-t border-gray-300 flex justify-around p-2 mt-2">
-            <button
-              id="like-button"
-              class="flex items-center text-gray-600 hover:bg-gray-100 p-2 rounded-lg"
-            >
-              <i class="far fa-thumbs-up mr-2"> </i>
-              Me gusta
+          <div class="border-t border-gray-300 flex justify-around p-1 mt-0">
+            <button id="like-button" class="flex items-center text-gray-600 hover:bg-gray-100 p-2 rounded-lg">
+              <i class="far fa-thumbs-up mr-2"></i> Me gusta
             </button>
-            <div
-              class="flex items-center select-none text-gray-600 hover:bg-gray-100 p-2 rounded-lg"
-            >
-              <i class="far fa-comment-alt mr-2"> </i>
-              Comentar
+            <div class="flex items-center select-none text-gray-600 hover:bg-gray-100 p-2 rounded-lg">
+              <i class="far fa-comment-alt mr-2"></i> Comentar
+            </div>
+            <div class="flex items-center select-none text-gray-600 hover:bg-gray-100 p-2 rounded-lg">
+              <i class="far fa-paper-plane mr-2"></i> Enviar
+            </div>
           </div>
-            <div
-              class="flex items-center select-none text-gray-600 hover:bg-gray-100 p-2 rounded-lg"
-            >
-              <i class="far fa-paper-plane mr-2"> </i>
-              Enviar
-          </div>
-          </div>
-          <img id="overlay-like-image" src="img/like.png" alt="Like"
-        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 opacity-0 transition-opacity duration-300 pointer-events-none" />
+          <img id="overlay-like-image" src="/img/like.png" alt="Like"
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 opacity-0 pointer-events-none" />
         </div>
 
-        <!-- Enlaces a LinkedIn y CV -->
-        <a
-          href="https://www.linkedin.com/in/ivannegretes/"
-          target="_blank"
-          class="flex flex-col justify-center items-center bg-[#0274B3] rounded-3xl relative overflow-hidden col-span-1 aspect-square shadow-sm cursor-pointer animate-flip-down animate-delay-[1200ms]"
+        <!-- GITHUB -->
+        <button
+          class="text-white rounded-3xl flex relative overflow-hidden col-span-1 aspect-square shadow-sm bg-gradient-to-br from-violet-950 via-slate-900 to-violet-900 p-4 justify-center items-center animate-flip-down animate-delay-[1100ms]"
+          onclick="window.open('https://github.com/IvanDNS','_blank')"
         >
-          <img
-            class="h-[45%] hover:scale-[120%] transition duration-300 ease-in-out"
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/640px-LinkedIn_logo_initials.png"
-            alt="LinkedIn"
-          />
-        </a>
+          <i class="fa-brands fa-github text-white/80 hover:scale-[115%] transition duration-300 ease-in-out" style="font-size: 180px;"></i>
+        </button>
 
-        <a
-          href="/pdf/IvánNegreteSudyCV.pdf"
-          target="_blank"
-          class="flex flex-col justify-center items-center bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-600 via-[#008784] to-[#008784] rounded-3xl relative overflow-hidden col-span-1 aspect-square shadow-sm cursor-pointer animate-flip-down animate-delay-[1300ms]"
+        <!-- TRINITY POOL -->
+        <button
+          class="text-white rounded-3xl flex relative overflow-hidden col-span-1 aspect-square shadow-sm bg-gradient-to-br from-violet-600 via-purple-600 to-fuchsia-600 p-4 justify-center items-center animate-flip-down animate-delay-[1100ms]"
+          onclick="window.open('https://trinitypool.netlify.app/','_blank')"
         >
-          <span
-            class="text-white text-9xl md:text-9xl font-Ubuntu font-bold hover:scale-[110%] transition duration-300 ease-in-out"
-            >CV</span
-          >
-        </a>
+          <div class="h-full flex justify-center items-center">
+            <img src="/img/trinity.png" class="h-[55%] wiggle-anim" alt="Trinity Pool" />
+          </div>
+        </button>
 
-        <!-- Sección de Experiencia Mapfre -->
+        <!-- TWITTER MAPFRE -->
+
         <div
           class="relative md:col-span-2 row-span-1 p-5 md:p-10 justify-center items-center text-white rounded-3xl shadow-sm bg-[#18181B] animate-flip-down animate-delay-[1400ms]"
         >
@@ -382,214 +387,134 @@
               alt="Logo Mapfre"
             />
             <div class="flex flex-col ml-4">
-              <a
-                class="font-bold text-white"
-                href="https://www.linkedin.com/company/mapfre/"
-                target="_blank"
-                >Mapfre Chile</a
-              >
-              <span class="text-gray-400"
-                >@Empresa-dedicada-al-sector-del-seguro</span
-              >
+              <a class="font-bold text-white" href="https://www.linkedin.com/company/mapfre/" target="_blank">Mapfre Chile</a>
+              <span class="text-gray-400">@Empresa-dedicada-al-sector-del-seguro</span>
             </div>
-            <svg
-              viewBox="328 355 335 276"
-              class="ml-auto"
-              height="24"
-              width="24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M 630, 425 A 195, 195 0 0 1 331, 600 A 142, 142 0 0 0 428, 570 A 70, 70 0 0 1 370, 523 A 70, 70 0 0 0 401, 521 A 70, 70 0 0 1 344, 455 A 70, 70 0 0 0 372, 460 A 70, 70 0 0 1 354, 370 A 195, 195 0 0 0 495, 442 A 67, 67 0 0 1 611, 380 A 117, 117 0 0 0 654, 363 A 65, 65 0 0 1 623, 401 A 117, 117 0 0 0 662, 390 A 65, 65 0 0 1 630, 425 Z"
-                style="fill:#3BA9EE"
-              ></path>
+            <svg viewBox="328 355 335 276" xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="ml-auto hover:scale-105 hover:drop-shadow-[0_0_8px_#3BA9EE] transition">
+              <path d="M 630, 425 A 195, 195 0 0 1 331, 600 A 142, 142 0 0 0 428, 570 A 70, 70 0 0 1 370, 523 A 70, 70 0 0 0 401, 521 A 70, 70 0 0 1 344, 455 A 70, 70 0 0 0 372, 460 A 70, 70 0 0 1 354, 370 A 195, 195 0 0 0 495, 442 A 67, 67 0 0 1 611, 380 A 117, 117 0 0 0 654, 363 A 65, 65 0 0 1 623, 401 A 117, 117 0 0 0 662, 390 A 65, 65 0 0 1 630, 425 Z" fill="#3BA9EE" />
             </svg>
           </div>
-          <div
-            class="mt-3 mb-1 leading-normal text-base md:text-lg line-clamp-5 text-ellipsis"
-          >
-            👨‍💼 Práctica Profesional: ¡Dónde todo comenzó! 😁 Bajo la dirección
-            del Gerente de TI, me embarqué en un emocionante proyecto:
-            desarrollar un módulo en la plataforma de seguros con PHP/Oracle. 🚀
-            Con el apoyo del Subgerente, implementamos un nuevo sistema de
+          <div class="mt-3 mb-1 leading-normal text-base md:text-lg line-clamp-5">
+            👨‍💼 Práctica Profesional: ¡Dónde todo comenzó! 😁 Bajo la dirección del Gerente de TI, me embarqué en un emocionante proyecto:
+            desarrollar un módulo en la plataforma de seguros con PHP/Oracle. 🚀 Con el apoyo del Subgerente, implementamos un nuevo sistema de
             versionado, Gitflow, utilizando SourceTree y Bitbucket.
           </div>
           <div class="text-gray-400 mb-3 text-sm">11:56 AM - May 2, 2022</div>
           <div class="flex text-gray-400">
             <div class="flex items-center mr-4">
               <svg class="mr-2" width="24" height="24" viewBox="0 0 24 24">
-                <path
-                  class="fill-current"
-                  d="M14.046 2.242l-4.148-.01h-.002c-4.374 0-7.8 3.427-7.8 7.802 0 4.098 3.186 7.206 7.465 7.37v3.828c0 .108.045.286.12.403.143.225.385.347.633.347.138 0 .277-.038.402-.118.264-.168 6.473-4.14 8.088-5.506 1.902-1.61 3.04-3.97 3.043-6.312v-.017c-.006-4.368-3.43-7.788-7.8-7.79zm3.787 12.972c-1.134.96-4.862 3.405-6.772 4.643V16.67c0-.414-.334-.75-.75-.75h-.395c-3.66 0-6.318-2.476-6.318-5.886 0-3.534 2.768-6.302 6.3-6.302l4.147.01h.002c3.532 0 6.3 2.766 6.302 6.296-.003 1.91-.942 3.844-2.514 5.176z"
-                >
-                </path>
+                <path class="fill-current" d="M14.046 2.242l-4.148-.01h-.002c-4.374 0-7.8 3.427-7.8 7.802 0 4.098 3.186 7.206 7.465 7.37v3.828c0 .108.045.286.12.403.143.225.385.347.633.347.138 0 .277-.038.402-.118.264-.168 6.473-4.14 8.088-5.506 1.902-1.61 3.04-3.97 3.043-6.312v-.017c-.006-4.368-3.43-7.788-7.8-7.79zm3.787 12.972c-1.134.96-4.862 3.405-6.772 4.643V16.67c0-.414-.334-.75-.75-.75h-.395c-3.66 0-6.318-2.476-6.318-5.886 0-3.534 2.768-6.302 6.3-6.302l4.147.01h.002c3.532 0 6.3 2.766 6.302 6.296-.003 1.91-.942 3.844-2.514 5.176z"></path>
               </svg>
-
               <span>715</span>
             </div>
             <div class="flex items-center mr-4">
               <svg class="mr-2" width="24" height="24" viewBox="0 0 24 24">
-                <path
-                  class="fill-current"
-                  d="M23.77 15.67c-.292-.293-.767-.293-1.06 0l-2.22 2.22V7.65c0-2.068-1.683-3.75-3.75-3.75h-5.85c-.414 0-.75.336-.75.75s.336.75.75.75h5.85c1.24 0 2.25 1.01 2.25 2.25v10.24l-2.22-2.22c-.293-.293-.768-.293-1.06 0s-.294.768 0 1.06l3.5 3.5c.145.147.337.22.53.22s.383-.072.53-.22l3.5-3.5c.294-.292.294-.767 0-1.06zm-10.66 3.28H7.26c-1.24 0-2.25-1.01-2.25-2.25V6.46l2.22 2.22c.148.147.34.22.532.22s.384-.073.53-.22c.293-.293.293-.768 0-1.06l-3.5-3.5c-.293-.294-.768-.294-1.06 0l-3.5 3.5c-.294.292-.294.767 0 1.06s.767.293 1.06 0l2.22-2.22V16.7c0 2.068 1.683 3.75 3.75 3.75h5.85c.414 0 .75-.336.75-.75s-.337-.75-.75-.75z"
-                >
-                </path>
-              </svg><span>726</span>
+                <path class="fill-current" d="M23.77 15.67c-.292-.293-.767-.293-1.06 0l-2.22 2.22V7.65c0-2.068-1.683-3.75-3.75-3.75h-5.85c-.414 0-.75.336-.75.75s.336.75.75.75h5.85c1.24 0 2.25 1.01 2.25 2.25v10.24l-2.22-2.22c-.293-.293-.768-.293-1.06 0s-.294.768 0 1.06l3.5 3.5c.145.147.337.22.53.22s.383-.072.53-.22l3.5-3.5c.294-.292.294-.767 0-1.06zm-10.66 3.28H7.26c-1.24 0-2.25-1.01-2.25-2.25V6.46l2.22 2.22c.148.147.34.22.532.22s.384-.073.53-.22c.293-.293.293-.768 0-1.06l-3.5-3.5c-.293-.294-.768-.294-1.06 0l-3.5 3.5c-.294.292-.294.767 0 1.06s.767.293 1.06 0l2.22-2.22V16.7c0 2.068 1.683 3.75 3.75 3.75h5.85c.414 0 .75-.336.75-.75s-.337-.75-.75-.75z"></path>
+              </svg>
+              <span>726</span>
             </div>
             <button id="buttonLiketwitter" class="flex items-center">
               <i class="fas fa-heart text-red-600 mr-2"></i>
-              </svg><span id="LikeTwitter">616</span>
+              <span id="LikeTwitter">616</span>
             </button>
           </div>
-          <img id="overlay-love-image" src="img/love.png" alt="Like"
-        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 opacity-0 transition-opacity duration-300 pointer-events-none" />
+          <img id="overlay-love-image" src="/img/love.png" alt="Like"
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 opacity-0 pointer-events-none" />
         </div>
 
-        <button
-        class="text-white rounded-3xl flex relative overflow-hidden col-span-1 aspect-square shadow-sm bg-[#f9f871] p-4 justify-center items-center animate-flip-down animate-delay-[1100ms]"
-        onclick=" window.open('https://github.com/IvanDNS','_blank')"
+        <!-- EDAD -->
+        <div
+          class="text-white rounded-3xl flex relative overflow-hidden aspect-square shadow-sm bg-gradient-to-br from-violet-950 to-slate-900 p-4 justify-center items-center animate-flip-down animate-delay-[1000ms]"
         >
-          <h1 class="text-[180px]"><i class="fa-brands fa-github text-gray-900 hover:scale-[115%] transition duration-300 ease-in-out"></i></h1>
-      </button>
-  
-      <button class="text-white rounded-3xl flex relative overflow-hidden col-span-1 aspect-square shadow-sm bg-cyan-950 bg-cover p-4 justify-center items-center animate-flip-down animate-delay-[1100ms]"
-        onclick=" window.open('https://trinitypool.netlify.app/','_blank')"
-      >
-      <div class="h-full flex justify-center items-center">
-      <img src="img/trinity.png" class="h-[55%] animate-wiggle animate-infinite animate-duration-[2000ms]" />
-      
-      </div>
-      </button>
+          <div class="flex justify-center items-center flex-col opacity-80">
+            <span id="edad" class="select-none text-white/80 text-9xl md:text-6xl lg:text-9xl font-Ubuntu font-bold hover:scale-[110%] transition duration-300 ease-in-out cursor-pointer">
+              26
+            </span>
+            <p class="select-none text-gray-400 text-xs md:text-lg uppercase text-center font-bold">Años</p>
+          </div>
+        </div>
 
-        <!-- Bloque Whatsapp -->
+        <!-- RELLENO -->
+        <div
+          class="text-white rounded-3xl flex relative overflow-hidden aspect-square shadow-sm bg-gradient-to-br from-violet-900 to-violet-950 p-4 justify-center items-center animate-flip-down animate-delay-[1000ms]"
+        >
+        </div>
+
+        <!-- WHATSAPP -->
         <div
           class="md:col-span-2 aspect-auto rounded-3xl flex relative overflow-hidden shadow-sm bg-white animate-flip-down animate-delay-[1100ms]"
         >
-          <div
-            class="w-16 bg-gray-200 hidden md:flex flex-col items-center py-4"
-          >
+          <div class="w-16 bg-gray-200 hidden md:flex flex-col items-center py-4">
             <div class="relative">
               <i class="fas fa-inbox text-xl text-gray-600"></i>
-              <span
-                class="absolute top-0 right-0 bg-green-500 text-white text-xs rounded-full px-1"
-              >
-                2
-              </span>
+              <span class="absolute top-0 right-0 bg-green-500 text-white text-xs rounded-full px-1">2</span>
             </div>
-            <i class="fas fa-bell text-xl text-gray-600 mb-4 mt-2"> </i>
-            <i class="fas fa-comment-dots text-xl text-gray-600 mb-4"> </i>
-            <i class="fas fa-users text-xl text-gray-600"> </i>
+            <i class="fas fa-bell text-xl text-gray-600 mb-4 mt-2"></i>
+            <i class="fas fa-comment-dots text-xl text-gray-600 mb-4"></i>
+            <i class="fas fa-users text-xl text-gray-600"></i>
           </div>
-
           <div class="flex-1 flex flex-col">
-
-            <div
-              class="flex items-center justify-between bg-white p-4 pb-1 border-b border-gray-200"
-            >
+            <div class="flex items-center justify-between bg-white p-4 pb-1 border-b border-gray-200">
               <h1 class="text-xl font-semibold">Chats</h1>
               <div class="flex items-center space-x-4">
-                <i class="fab fa-whatsapp text-2xl text-green-600 pr-4"></i>
+                <i class="fab fa-whatsapp text-2xl text-green-600 pr-4 hover:drop-shadow-[0_0_5px_#3BA9EE] hover:scale-105 transition"></i>
               </div>
             </div>
-
             <div class="p-4 bg-white border-b border-gray-200">
               <div class="relative mb-2">
-                <input
-                  class="w-full py-2 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="Educación"
-                  type="text"
-                />
-                <i class="fas fa-search absolute left-3 top-3 text-gray-400"> </i>
+                <input class="w-full py-2 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Educación" type="text" />
+                <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
               </div>
               <div class="flex space-x-2">
-                <section
-                  class="px-4 py-1 select-none bg-green-100 text-green-600 rounded-full"
-                >
-                  Todos
-                </section>
-                <section
-                  class="px-4 py-1 select-none bg-gray-100 text-gray-600 rounded-full"
-                >
-                  No leídos
-                </section>
-                <section
-                  class="px-4 py-1 select-none bg-gray-100 text-gray-600 rounded-full"
-                >
-                  Favoritos
-                </section>
-                <section
-                  class="px-4 py-1 select-none bg-gray-100 text-gray-600 rounded-full"
-                >
-                  Grupos
-                </section>
+                <section class="px-4 py-1 select-none bg-green-100 text-green-600 rounded-full">Todos</section>
+                <section class="px-4 py-1 select-none bg-gray-100 text-gray-600 rounded-full">No leídos</section>
+                <section class="px-4 py-1 select-none bg-gray-100 text-gray-600 rounded-full">Favoritos</section>
+                <section class="px-4 py-1 select-none bg-gray-100 text-gray-600 rounded-full">Grupos</section>
               </div>
             </div>
-            <!-- Chat List -->
             <div class="flex-1 overflow-y-auto">
-              <div
-                class="p-4 bg-white border-b border-gray-200 flex items-center justify-between"
-              >
+              <div class="p-4 bg-white border-b border-gray-200 flex items-center justify-between">
                 <div class="flex items-center space-x-4">
-                  <img
-                    class="w-12 rounded-full"
-                    src="img/inacap.png"
-                    alt="Logo INACAP"
-                  />
+                  <img class="w-12 rounded-full" src="/img/inacap.png" alt="Logo INACAP" />
                   <div>
                     <div class="flex items-center space-x-2">
-                      <span class="font-semibold">
-                        Universidad Tecnologica de Chile INACAP
-                      </span>
+                      <span class="font-semibold">Universidad Tecnologica de Chile INACAP</span>
                     </div>
-                    <span class="text-gray-500 text-sm">
-                      Titulado de ingeniero en Informática
-                    </span>
+                    <span class="text-gray-500 text-sm">Titulado de ingeniero en Informática</span>
                   </div>
                 </div>
                 <div class="text-right">
-                  <span class="text-gray-500 text-sm"> 2017-2021 </span>
+                  <span class="text-gray-500 text-sm">2017-2021</span>
                   <div class="flex items-center space-x-2 mt-1">
-                    <i class="fas fa-thumbtack text-gray-400"> </i>
-                    <i class="fas fa-check-double text-gray-400"> </i>
+                    <i class="fas fa-thumbtack text-gray-400"></i>
+                    <i class="fas fa-check-double text-gray-400"></i>
                   </div>
                 </div>
               </div>
-              <div
-                class="p-4 bg-white border-b border-gray-200 flex items-center justify-between"
-              >
+              <div class="p-4 bg-white border-b border-gray-200 flex items-center justify-between">
                 <div class="flex items-center space-x-4">
-                  <img
-                    class="w-12 rounded-full"
-                    src="img/inba.webp"
-                    alt="Logo INBA"
-                  />
+                  <img class="w-12 rounded-full" src="/img/inba.webp" alt="Logo INBA" />
                   <div>
                     <div class="flex items-center space-x-2">
-                      <span class="font-semibold">
-                        Internado Nacional Barros Arana
-                      </span>
+                      <span class="font-semibold">Internado Nacional Barros Arana</span>
                     </div>
-                    <span class="text-gray-500 text-sm">
-                      Educacion media
-                    </span>
+                    <span class="text-gray-500 text-sm">Educacion media</span>
                   </div>
                 </div>
                 <div class="text-right">
-                  <span class="text-gray-500 text-sm"> 2011-2016 </span>
+                  <span class="text-gray-500 text-sm">2011-2016</span>
                   <div class="flex items-center space-x-2 mt-1">
-                    <span
-                      class="bg-green-500 text-white text-xs rounded-full px-2 animate-pulse"
-                    >
-                      2
-                    </span>
+                    <span class="bg-green-500 text-white text-xs rounded-full px-2 animate-pulse">2</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
       </div>
     </div>
+
     <script is:inline src="/scripts.js"></script>
   </body>
 </html>
